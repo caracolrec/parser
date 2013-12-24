@@ -1,0 +1,17 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body(ng-app='parserApp')
+    div(ng-view)
+    block content
+    script(src='components/angular/angular.js')
+    script(src='components/angular-resource/angular-resource.js')
+    script(src='components/angular-cookies/angular-cookies.js')
+    script(src='components/angular-sanitize/angular-sanitize.js')
+    script(src='components/angular-route/angular-route.js')
+
+    script(src='js/app.js')
+    script(src='js/controllers/main.js')
+    script(src='js/services/main.js')
