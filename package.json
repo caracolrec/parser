@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "~3.3.4",
     "jade": "~0.34.0",
-    "htmlparser2": "~3.4.0"
+    "htmlparser2": "~3.4.0",
+    "soupselect": "~0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

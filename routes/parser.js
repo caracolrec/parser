@@ -2,6 +2,7 @@
 
 var htmlparser = require('htmlparser2');
 var request = require('request');
+var select = require('soupselect').select;
 
 var concatDom = function(dom){
   var results = '';
@@ -24,8 +25,12 @@ var handler = new htmlparser.DomHandler(function (error, dom){
   if (error) {
     console.log('parser.js error ln 5', error);
   } else {
-    concatDom(dom);
-    console.log('parser.js success ln 7, dom:', dom);
+    // concatDom(dom);
+    var titles = select(dom, '#articlebody');
+    titles.forEach(function(title){
+      console.log(title);
+    });
+    console.log('made it here still');
   }
 }, {normalizeWhitespace: true});
 
